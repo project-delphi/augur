@@ -18,6 +18,10 @@
         "services": "services"
       },
       "extensions": [".js", ".jsx"]
+    }],
+    ["react-intl", {
+      "messagesDir": "./build/messages",
+      "enforceDescriptions": false
     }]
   ],
   "compact": false

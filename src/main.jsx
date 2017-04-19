@@ -13,6 +13,17 @@ import store from 'src/store';
 
 import { augur } from 'services/augurjs';
 
+import { IntlProvider, addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
+import localeData from './../build/locales/data.json';
+
+addLocaleData([...en, ...es]);
+
+const language = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage;
+const languageWithoutRegionCode = language.toLowerCase().split(/[_-]+/)[0];
+const messages = localeData[languageWithoutRegionCode] || localeData[language] || localeData.en;
+
 require('core-js/fn/array/find');
 require('core-js/fn/string/starts-with');
 
@@ -38,7 +49,9 @@ function render(appElement, selectors) {
   ReactDOM.render(
     <Provider store={store}>
       <AppContainer>
-        <App {...selectors} />
+        <IntlProvider locale={languageWithoutRegionCode} messages={messages}>
+          <App {...selectors} />
+        </IntlProvider>
       </AppContainer>
     </Provider>,
     appElement

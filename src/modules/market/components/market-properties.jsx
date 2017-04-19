@@ -8,6 +8,8 @@ import getValue from 'utils/get-value';
 import setShareDenomination from 'utils/set-share-denomination';
 import shareDenominationLabel from 'utils/share-denomination-label';
 
+import { FormattedMessage } from 'react-intl';
+
 const MarketProperties = (p) => {
   const shareVolumeRounded = setShareDenomination(getValue(p, 'volume.rounded'), p.selectedShareDenomination);
   const shareVolumeFormatted = getValue(p, 'volume.formatted');
@@ -33,8 +35,12 @@ const MarketProperties = (p) => {
             globalEventOff="click"
           >
             <span className="tooltip-text">
-                The outcome of this event will be known on or before {p.endDate.full}.
-              </span>
+              <FormattedMessage
+                id="outcome_date"
+                defaultMessage={`The outcome of this event will be known on or before {date}.`}
+                values={{ date: <span>{ p.endDate.full }</span> }}
+              />
+            </span>
           </ReactTooltip>
         </li>
       }
