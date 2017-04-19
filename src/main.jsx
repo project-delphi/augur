@@ -16,7 +16,7 @@ import { augur } from 'services/augurjs';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
-import localeData from './../build/locales/data.json';
+import localeData from './messages.json';
 
 addLocaleData([...en, ...es]);
 
