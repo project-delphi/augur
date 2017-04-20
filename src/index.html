@@ -131,6 +131,11 @@
         trigger_position: 'left',
         strings: userVoiceStrings[userVoiceLanguage]
       }]);
+      if (userVoiceLanguage == 'es') {
+        document.getElementById('uservoice-button').innerText = 'Sugerencias';
+      } else if (userVoiceLanguage ==='zh') {
+        document.getElementById('uservoice-button').innerText = '反馈';
+      }
     </script>
 
     <!-- NOTE: all relevant entry scripts are automatically appended here during build -->
