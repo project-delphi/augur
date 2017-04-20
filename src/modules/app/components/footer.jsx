@@ -121,9 +121,8 @@ export default class Footer extends Component {
           {...p}
         />
         <div id="footer_content">
-          <a className="link" href="https://augur.net" target="_blank" rel="noopener noreferrer" >About</a>
-          <a className="link" href="http://augur.link/augur-beta-ToS-v2.pdf" target="_blank" rel="noopener noreferrer" >Terms of Service</a>
-          <a className="link" href="https://augur.net/license.txt" target="_blank" rel="noopener noreferrer">License</a>
+          <a className="link" href="https://www.mercado888.com" target="_blank" rel="noopener noreferrer" >Mercado888</a>
+          <a className="link" href="http://www.gnetgroupplc.com" target="_blank" rel="noopener noreferrer" >GNET Group PLC</a>
         </div>
       </footer>
     );
