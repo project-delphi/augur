@@ -126,6 +126,7 @@
       var userVoiceLanguageWithRegion = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage;
       var userVoiceLanguage = userVoiceLanguageWithRegion.toLowerCase().split(/[_-]+/)[0];
       UserVoice.push(['addTrigger', '#uservoice-button', {
+        locale: userVoiceLanguage,
         mode: 'smartvote',
         trigger_style: 'tab',
         trigger_position: 'left',
