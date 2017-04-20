@@ -100,17 +100,36 @@
     <button id="uservoice-button" style="position:fixed;bottom:0;left:5%;font-size:14px;background:#2C2C2C;color:#FFFFFF;padding:10px 20px;border-radius:5px 5px 0 0;font-weight:400;z-index:100;visibility:visible !important;cursor:pointer;margin:0">Feedback</button>
     <script type="text/javascript">
       UserVoice=window.UserVoice||[],function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://widget.uservoice.com/CDL6e6K1fQciGvhFmwEUg.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
-      UserVoice.push(['addTrigger', '#uservoice-button', {
-        mode: 'smartvote',
-        trigger_style: 'tab',
-        trigger_position: 'left',
-        strings: {
-          post_suggestion_title: 'Have an idea for Augur?',
+      var userVoiceStrings = {
+        en: {
+          post_suggestion_title: 'Have an idea for Mercado888?',
           post_suggestion_body: 'Submit your thoughts to have the community join in!',
           post_suggestion_message_placeholder: 'Functionality improvements, new feature requests, etc.',
           contact_menu_label: 'Want to send the team a message?',
           contact_message_placeholder: 'Need help, have a question, or need to contact the team? Let us know here.'
+        },
+        es: {
+          post_suggestion_title: 'Tienes una idea para Mercado888?',
+          post_suggestion_body: 'Envíe sus pensamientos para que la comunidad participe!',
+          post_suggestion_message_placeholder: 'Mejoras en la funcionalidad, nuevas solicitudes, etc.',
+          contact_menu_label: '¿Quieres enviarle un mensaje al equipo?',
+          contact_message_placeholder: '¿Necesita ayuda, tiene alguna pregunta o necesita ponerse en contacto con el equipo? Háganoslo saber aquí.'
+        },
+        zh: {
+          post_suggestion_title: '有一个想法Mercado888？',
+          post_suggestion_body: '提交您的想法让社区加入！',
+          post_suggestion_message_placeholder: '功能改进，新功能请求等',
+          contact_menu_label: '想派团队发消息？',
+          contact_message_placeholder: '需要帮助，有问题，还是需要联系团队？ 让我们知道这里。'
         }
+      };
+      var userVoiceLanguageWithRegion = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage;
+      var userVoiceLanguage = userVoiceLanguageWithRegion.toLowerCase().split(/[_-]+/)[0];
+      UserVoice.push(['addTrigger', '#uservoice-button', {
+        mode: 'smartvote',
+        trigger_style: 'tab',
+        trigger_position: 'left',
+        strings: userVoiceStrings[userVoiceLanguage]
       }]);
     </script>
 
