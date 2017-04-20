@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import Link from 'modules/link/components/link';
-import AugurLogoIcon from 'modules/common/components/augur-logo-icon';
+import AugurLogoIcon from 'modules/common/components/mercado888-logo-icon';
 import SideBarFilterIcon from 'modules/common/components/side-bar-filter-icon';
 
 import { ACCOUNT, MARKETS, TRANSACTIONS, MY_POSITIONS, MY_MARKETS, MY_REPORTS, AUTHENTICATION } from 'modules/app/constants/views';
