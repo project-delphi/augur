@@ -13,4 +13,12 @@ export const selectTopics = createSelector(
     .sort(popularityDifference)
 );
 
+export const selectGNetTopics = createSelector(
+  selectTopicsState,
+  topics => Object.keys(topics || {})
+    .map(topic => ({ topic, popularity: topics[topic] }))
+    .sort(popularityDifference)
+    .filter(topic => topic.topic && topic.topic.indexOf('GNET') > -1)
+);
+
 const popularityDifference = (topic1, topic2) => topic2.popularity - topic1.popularity;
