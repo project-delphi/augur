@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 
 import NullStateMessage from 'modules/common/components/null-state-message';
@@ -199,7 +200,11 @@ export default class TopicsView extends Component {
                 disabled={!p.loginAccount.address}
                 {...p.createMarketLink}
               >
-                + Create New Market
+                +
+                <FormattedMessage
+                  id="create_new_market"
+                  defaultMessage="Create New Market"
+                />
               </Link>
             }
           </div>
