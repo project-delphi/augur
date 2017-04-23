@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import classnames from 'classnames';
 
 import Link from 'modules/link/components/link';
@@ -43,7 +43,10 @@ const Nav = (p) => {
         className={classnames('app-nav-link', { active: ((p.activeView === MARKETS || (!!parseInt(p.activeView, 10) && Number.isInteger(parseInt(p.activeView, 10)))) && p.marketsInfo.selectedMarketsHeader == null) })}
       >
         <i className="nav-icon fa fa-line-chart" />
-        Markets
+        <FormattedMessage
+          id="markets"
+          defaultMessage="Markets"
+        />
       </Link>
       {p.logged && !!p.numFavorites &&
         <Link
@@ -70,7 +73,10 @@ const Nav = (p) => {
         >
           <i className="nav-icon fa fa-copy" />
           <span className="nav-count">{p.numPendingReports} </span>
-          Pending Reports
+          <FormattedMessage
+            id="pending_reports"
+            defaultMessage="Pending Reports"
+          />
         </Link>
       }
       {p.logged && !!p.portfolioTotals &&
@@ -83,7 +89,10 @@ const Nav = (p) => {
           className={classnames('app-nav-link', MY_POSITIONS, { active: [MY_POSITIONS, MY_MARKETS, MY_REPORTS].indexOf(p.activeView) > -1 })}
         >
           <i className="nav-icon fa fa-money" />
-          Portfolio
+          <FormattedMessage
+            id="portfolio"
+            defaultMessage="Portfolio"
+          />
         </Link>
       }
       {p.logged &&
@@ -112,7 +121,10 @@ const Nav = (p) => {
           className={classnames('app-nav-link', ACCOUNT, { active: p.activeView === ACCOUNT })}
         >
           <i className="nav-icon fa fa-cog" />
-          Account
+          <FormattedMessage
+            id="account"
+            defaultMessage="Account"
+          />
         </Link>
       }
       {!p.logged &&

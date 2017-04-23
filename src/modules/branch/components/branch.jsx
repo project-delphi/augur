@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactTooltip from 'react-tooltip';
+import { FormattedMessage } from 'react-intl';
 import { Line } from 'rc-progress';
 
 import Bullet from 'modules/common/components/bullet';
@@ -12,7 +13,12 @@ const Branch = p => (
       strokeColor="#5c2634"
     />
     <span className="reporting-cycle-info">
-      Reporting Cycle {p.reportPeriod} <Bullet /> {Math.round(p.currentPeriodProgress)}% complete <Bullet /> {p.phaseLabel} phase ends {p.phaseTimeRemaining}
+      <FormattedMessage
+        id="reporting_cycle_period"
+        defaultMessage="Reporting Cycle {reportPeriod}"
+        values={{ reportPeriod: p.reportPeriod }}
+      />
+      <Bullet /> {Math.round(p.currentPeriodProgress)}% complete <Bullet /> {p.phaseLabel} phase ends {p.phaseTimeRemaining}
     </span>
     <span
       data-tip

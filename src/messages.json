@@ -1,5 +1,24 @@
 {
   "es": {
-    "outcome_date": "El resultado de este evento será conocido el o antes de {date}"
+    "account": "Cuenta",
+    "create_new_market": "Crear nuevo mercado",
+    "markets": "Mercados",
+    "no_markets_available": "No mercados disponibles",
+    "pending_reports": "Reportes Pendientes",
+    "portfolio": "Portafolio",
+    "outcome_date": "El resultado de este evento será conocido el o antes de {date}",
+    "reporting_cycle_period": "Ciclo de informes",
+    "search_markets": "Buscar Mercados"
+  },
+  "zh": {
+    "account": "创建市场",
+    "create_new_market": "投资组合",
+    "markets": "注册登录",
+    "no_markets_available": "没有市场可用",
+    "pending_reports": "",
+    "portfolio": "交易",
+    "outcome_date": "此事件的结果将在之前或之前知道",
+    "reporting_cycle_period": "报告周期",
+    "search_markets": "搜索市场"
   }
 }

@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { FormattedMessage } from 'react-intl';
 import MarketsFilterSort from 'modules/markets/components/markets-filter-sort';
 import Link from 'modules/link/components/link';
 import EmDash from 'modules/common/components/em-dash';
@@ -8,7 +9,10 @@ const MarketsHeaders = p => (
     <div className="view-header">
       <div className="view-header-group">
         <h2>
-          Markets
+          <FormattedMessage
+            id="markets"
+            defaultMessage="Markets"
+          />
           {p.marketsHeader.selectedMarketsHeader &&
             <span className="capitalized-header"> <EmDash /> {p.marketsHeader.selectedMarketsHeader} </span>
           }
@@ -21,7 +25,11 @@ const MarketsHeaders = p => (
             disabled={!p.loginAccount.address}
             {...p.createMarketLink}
           >
-            + Create New Market
+            +
+            <FormattedMessage
+              id="create_new_market"
+              defaultMessage="Create New Market"
+            />
           </Link>
         }
       </div>
