@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 import Input from 'modules/common/components/input';
 import { injectIntl, intlShape } from 'react-intl';
 
-const MarketsSearch = p => {
-  const placeholder = p.intl.formatMessage({id: 'search_markets', defaultMessage: 'Search Markets'});
+const MarketsSearch = (p) => {
+  const placeholder = p.intl.formatMessage({ id: 'search_markets', defaultMessage: 'Search Markets' });
   return (
     <article className={`search-input ${p.className}`} >
       <Input
@@ -14,7 +14,7 @@ const MarketsSearch = p => {
         onChange={p.onChangeKeywords}
       />
     </article>
-  )
+  );
 };
 
 MarketsSearch.propTypes = {
