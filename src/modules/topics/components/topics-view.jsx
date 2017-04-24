@@ -178,7 +178,7 @@ class TopicsView extends Component {
   render() {
     const p = this.props;
     const s = this.state;
-    const searchPlaceholder = p.intl.formatMessage({id: 'search_topics', defaultMessage: 'Search Topics'});
+    const searchPlaceholder = p.intl.formatMessage({ id: 'search_topics', defaultMessage: 'Search Topics' });
 
     return (
       <section id="topics_view">

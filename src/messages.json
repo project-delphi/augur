@@ -15,6 +15,8 @@
     "share_total_traded": "{shareVolumeFormatted} total {denomination} intercambiado",
     "taker_fee": "Tarifa de tomador:",
     "trade": "Intercambiar",
+    "num_transaction": "{numTotal} Transaccion",
+    "num_transactions": "{numTotal} Transacciones",
     "x_to_x_of_x": "{currentNums} de {numUnpaginated}",
     "volume": "Volumen"
   },
@@ -34,6 +36,8 @@
     "share_total_traded": "{shareVolumeFormatted} total {denomination} intercambiado",
     "taker_fee": "指定从订单中获取现有订单的人支付的费用。",
     "trade": "贸易",
+    "num_transaction": "{numTotal} 交易",
+    "num_transactions": "{numTotal} 帐户",
     "volume": "最新",
     "x_to_x_of_x": "{currentNums} 的 {numUnpaginated}"
   }
