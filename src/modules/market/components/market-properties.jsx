@@ -50,7 +50,12 @@ const MarketProperties = (p) => {
           data-for={`${p.id}-maker-fee-tooltip`}
           data-event="click focus"
         >
-          <span className="property-label">Maker Fee:</span>
+          <span className="property-label">
+            <FormattedMessage
+              id="maker_fee"
+              defaultMessage="Maker Fee:"
+            />
+          </span>
           <ValueDenomination className="property-value" {...p.makerFeePercent} />
         </a>
         <ReactTooltip
@@ -71,7 +76,12 @@ const MarketProperties = (p) => {
           data-for={`${p.id}-taker-fee-tooltip`}
           data-event="click focus"
         >
-          <span className="property-label">Taker Fee:</span>
+          <span className="property-label">
+            <FormattedMessage
+              id="taker_fee"
+              defaultMessage="Taker Fee:"
+            />
+          </span>
           <ValueDenomination className="property-value" {...p.takerFeePercent} />
         </a>
         <ReactTooltip
@@ -93,7 +103,12 @@ const MarketProperties = (p) => {
             data-for={`${p.id}-volume-tooltip`}
             data-event="click focus"
           >
-            <span className="property-label">Volume:</span>
+            <span className="property-label">
+              <FormattedMessage
+                id="volume"
+                defaultMessage="Volume:"
+              />
+            </span>
             <ValueDenomination className="property-value" formatted={shareVolumeRounded} denomination={shareDenomination} />
           </a>
           <ReactTooltip
@@ -104,7 +119,11 @@ const MarketProperties = (p) => {
             globalEventOff="click"
           >
             <span className="tooltip-text">
-              {shareVolumeFormatted} total {p.volume.denomination} traded
+              <FormattedMessage
+                id="share_total_traded"
+                defaultMessage="{shareVolumeFormatted} total {denomination} traded"
+                values={{ shareVolumeFormatted, denomination: p.volume.denomination }}
+              />
             </span>
           </ReactTooltip>
         </li>
@@ -116,7 +135,12 @@ const MarketProperties = (p) => {
             data-for={`${p.id}-pending-reports-tooltip`}
             data-event="click focus"
           >
-            <span className="property-label">Pending Reports:</span>
+            <span className="property-label">
+              <FormattedMessage
+                id="pending_reports"
+                defaultMessage="Pending Reports:"
+              />
+            </span>
             <span> <strong>{p.numPendingReports}</strong></span>
           </a>
           <ReactTooltip
@@ -127,7 +151,11 @@ const MarketProperties = (p) => {
             globalEventOff="click"
           >
             <span className="tooltip-text">
-              {p.numPendingReports} reports submitted on this market thus far
+              <FormattedMessage
+                id="pending_reports_thus_far"
+                defaultMessage="{ numPendingReports } reports submitted on this market thus far"
+                values={{ numPendingReports: p.numPendingReports }}
+              />
             </span>
           </ReactTooltip>
         </li>

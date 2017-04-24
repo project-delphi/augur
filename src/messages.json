@@ -2,23 +2,37 @@
   "es": {
     "account": "Cuenta",
     "create_new_market": "Crear nuevo mercado",
+    "maker_fee": "Cuota de creador",
     "markets": "Mercados",
     "no_markets_available": "No mercados disponibles",
-    "pending_reports": "Reportes Pendientes",
+    "pending_reports": "Informes Pendientes",
+    "pending_reports_thus_far": "{ numPendingReports } reports submitted on this market thus far",
     "portfolio": "Portafolio",
     "outcome_date": "El resultado de este evento será conocido el o antes de {date}",
     "reporting_cycle_period": "Ciclo de informes",
-    "search_markets": "Buscar Mercados"
+    "search_markets": "Buscar Mercados",
+    "share_total_traded": "{shareVolumeFormatted} total {denomination} intercambiado",
+    "taker_fee": "Tarifa de tomador:",
+    "trade": "Intercambiar",
+    "x_to_x_of_x": "{currentNums} de {numUnpaginated}",
+    "volume": "Volumen"
   },
   "zh": {
     "account": "创建市场",
     "create_new_market": "投资组合",
+    "maker_fee": "搜索市场",
     "markets": "注册登录",
     "no_markets_available": "没有市场可用",
-    "pending_reports": "",
+    "pending_reports": "待报告",
+    "pending_reports_thus_far": "{numPendingReports} reports submitted on this market thus far",
     "portfolio": "交易",
     "outcome_date": "此事件的结果将在之前或之前知道",
     "reporting_cycle_period": "报告周期",
-    "search_markets": "搜索市场"
+    "search_markets": "搜索市场",
+    "share_total_traded": "{shareVolumeFormatted} total {denomination} intercambiado",
+    "taker_fee": "指定从订单中获取现有订单的人支付的费用。",
+    "trade": "贸易",
+    "volume": "最新",
+    "x_to_x_of_x": "{currentNums} 的 {numUnpaginated}"
   }
 }
