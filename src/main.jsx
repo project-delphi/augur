@@ -16,9 +16,10 @@ import { augur } from 'services/augurjs';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
+import zh from 'react-intl/locale-data/zh';
 import localeData from './messages.json';
 
-addLocaleData([...en, ...es]);
+addLocaleData([...en, ...es, ...zh]);
 
 const language = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage;
 const languageWithoutRegionCode = language.toLowerCase().split(/[_-]+/)[0];

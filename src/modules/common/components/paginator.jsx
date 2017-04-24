@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import Link from 'modules/link/components/link';
 
 const Paginator = p => (
@@ -17,7 +18,11 @@ const Paginator = p => (
 
       <div className="pagination-group-2">
         <span className="pagination-count">
-          {`${p.pagination.startItemNum} - ${p.pagination.endItemNum}`} <strong>of</strong> {p.pagination.numUnpaginated}
+          <FormattedMessage
+            id="x_to_x_of_x"
+            defaultMessage="{currentNums} of {numUnpaginated}"
+            values={{ currentNums: `${p.pagination.startItemNum} - ${p.pagination.endItemNum}`, numUnpaginated: p.pagination.numUnpaginated }}
+          />
         </span>
       </div>
 
