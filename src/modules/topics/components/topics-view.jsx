@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import classNames from 'classnames';
 
 import NullStateMessage from 'modules/common/components/null-state-message';
@@ -9,7 +9,7 @@ import Input from 'modules/common/components/input';
 import Link from 'modules/link/components/link';
 import Branch from 'modules/branch/components/branch';
 
-export default class TopicsView extends Component {
+class TopicsView extends Component {
   static propTypes = {
     topics: PropTypes.array,
     branch: PropTypes.object,
@@ -178,6 +178,7 @@ export default class TopicsView extends Component {
   render() {
     const p = this.props;
     const s = this.state;
+    const searchPlaceholder = p.intl.formatMessage({ id: 'search_topics', defaultMessage: 'Search Topics' });
 
     return (
       <section id="topics_view">
@@ -190,7 +191,7 @@ export default class TopicsView extends Component {
               <Input
                 isSearch
                 isClearable
-                placeholder="Search Topics"
+                placeholder={searchPlaceholder}
                 onChange={keywords => this.setState({ keywords })}
               />
             </div>
@@ -231,3 +232,5 @@ export default class TopicsView extends Component {
     );
   }
 }
+
+export default injectIntl(TopicsView);

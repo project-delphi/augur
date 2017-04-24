@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import classnames from 'classnames';
 
 import Link from 'modules/link/components/link';
@@ -12,6 +12,9 @@ import { FAVORITES, PENDING_REPORTS } from 'modules/markets/constants/markets-su
 // NOTE --  first child div is there to pass up a ref so that other methods can
 //          acquire the row height of the navs in the footer
 const Nav = (p) => {
+  const transactionsTotalsTitleID = `num_${p.transactionsTotals.title.split(' ')[1].toLowerCase()}`;
+  const transactionsTotalsTitle = p.intl.formatMessage({ id: transactionsTotalsTitleID, defaultMessage: p.transactionsTotals.title }, { numTotal: p.transactionsTotals.numTotal });
+
   function collapseFooter() {
     if (p.updateIsFooterCollapsed) {
       p.updateIsFooterCollapsed(true);
@@ -108,7 +111,7 @@ const Nav = (p) => {
           {!!p.numTransactionsWorking &&
             <span className="nav-count">{p.numTransactionsWorking} </span>
           }
-          {p.transactionsTotals.title}
+          {transactionsTotalsTitle}
         </Link>
       }
       {p.logged &&
@@ -148,4 +151,4 @@ const Nav = (p) => {
   );
 };
 
-export default Nav;
+export default injectIntl(Nav);
