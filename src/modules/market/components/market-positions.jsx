@@ -1,4 +1,5 @@
 import React from 'react';
+import { injectIntl } from 'react-intl';
 
 import MarketPositionsRow from 'modules/market/components/market-positions-row';
 import NullStateMessage from 'modules/common/components/null-state-message';
@@ -9,7 +10,7 @@ import getValue from 'utils/get-value';
 
 const MarketPositions = (p) => {
   const outcomePositions = getValue(p, 'market.myPositionOutcomes');
-  const nullMessage = 'No Current Positions';
+  const nullMessage = p.intl.formatMessage({ id: 'no_current_positions', defaultMessage: 'No Current Positions' });
 
   return (
     <article className="market-positions">
@@ -44,4 +45,4 @@ const MarketPositions = (p) => {
   );
 };
 
-export default MarketPositions;
+export default injectIntl(MarketPositions);

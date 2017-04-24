@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import ComponentNav from 'modules/common/components/component-nav';
 import MarketPositions from 'modules/market/components/market-positions';
@@ -31,7 +32,12 @@ export default class MarketUserData extends Component {
 
     return (
       <article className="market-user-data">
-        <h3>My Trading</h3>
+        <h3>
+          <FormattedMessage
+            id="my_trading"
+            defaultMessage="My Trading"
+          />
+        </h3>
         <ComponentNav
           navItems={p.navItems}
           selectedNav={s.selectedNav}
