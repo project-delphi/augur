@@ -10,7 +10,7 @@ import getValue from 'utils/get-value';
 
 const MarketPositions = (p) => {
   const outcomePositions = getValue(p, 'market.myPositionOutcomes');
-  const nullMessage = p.intl.formatMessage({ id: 'no_current_positions', defaultMessage: 'No Current Positions'});
+  const nullMessage = p.intl.formatMessage({ id: 'no_current_positions', defaultMessage: 'No Current Positions' });
 
   return (
     <article className="market-positions">

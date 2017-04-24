@@ -33,10 +33,10 @@ export default class MarketUserData extends Component {
     return (
       <article className="market-user-data">
         <h3>
-        <FormattedMessage
-          id="my_trading"
-          defaultMessage="My Trading"
-        />
+          <FormattedMessage
+            id="my_trading"
+            defaultMessage="My Trading"
+          />
         </h3>
         <ComponentNav
           navItems={p.navItems}
